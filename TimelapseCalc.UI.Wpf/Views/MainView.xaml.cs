@@ -3,7 +3,7 @@ using TimelapseCalc.Core.ViewModels;
 
 namespace TimelapseCalc.UI.Wpf.Views
 {
-    public partial class FirstView : MvxWpfView
+    public partial class MainView : MvxWpfView
     {
         public new MainViewModel ViewModel
         {
@@ -11,7 +11,7 @@ namespace TimelapseCalc.UI.Wpf.Views
             set { base.ViewModel = value; }
         }
 
-        public FirstView()
+        public MainView()
         {
             InitializeComponent();
         }
