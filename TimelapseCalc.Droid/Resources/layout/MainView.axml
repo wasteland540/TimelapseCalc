@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      android:text="Picture Count:"/>
+  
+  <SeekBar
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:max="1000"
+      local:MvxBind="Progress PictureCount" />
+
+  <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20dp"
+    local:MvxBind="Text PictureCount"/>
+
+
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      android:text="Exposion Time:"/>
+  
+  <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      android:hint="e.g. 1/200 or 4&quot;"
+      local:MvxBind="Text ExposionTime" />
+
+
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      android:text="Take picture every X sec.:"/>
+
+  <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      local:MvxBind="Text TakePicEveryXSec" />
+
+
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      android:text="Duration (min.):"/>
+
+  <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      local:MvxBind="Text Duration" />
+
+  <MvxRadioGroup
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="40dp"
+      local:MvxItemTemplate="@layout/item_radio"
+      local:MvxBind="ItemsSource OperationList;SelectedItem SelectedOperation"/>
+  
+  <Button 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      android:text="Calculate"
+      local:MvxBind="Click CalculationCommand"/>
+
+</LinearLayout>
